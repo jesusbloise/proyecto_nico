@@ -1,5 +1,6 @@
 import React from 'react';
 import { SOUND_OPTIONS } from '../constants';
+import { NeonTooltip } from './NeonTooltip';
 
 interface SoundSelectorProps {
   selectedSounds: string[];
@@ -17,7 +18,9 @@ export const SoundSelector: React.FC<SoundSelectorProps> = ({ selectedSounds, on
 
   return (
     <div>
-      <h3 className="font-retro text-neon-pink text-[10px] mb-3">AUDIO CONFIGURATION</h3>
+      <NeonTooltip content="El orden de los audios en el nombre final dependerá del orden en que los selecciones." align="left">
+        <h3 className="font-retro text-neon-pink text-[10px] mb-3 cursor-help inline-block">AUDIO CONFIGURATION</h3>
+      </NeonTooltip>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
         {SOUND_OPTIONS.map(opt => {
           const isSelected = selectedSounds.includes(opt.value);
