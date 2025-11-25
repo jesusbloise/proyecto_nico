@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Media Pro Namer NEON - The professional tool for standardized file naming in Post-Production, VFX, and Delivery workflows." />
+    <title>Media Pro Namer NEON | Professional Naming Tool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              neon: {
+                pink: '#ff6ac1',
+                cyan: '#00FFFF',
+                dark: '#050505',
+                panel: '#0a0a12'
+              }
+            },
+            fontFamily: {
+              retro: ['"Press Start 2P"', 'cursive'],
+              code: ['"VT323"', 'monospace'],
+              tech: ['"Share Tech Mono"', 'monospace'],
+            },
+            boxShadow: {
+              'neon-pink': '0 0 5px #ff6ac1, 0 0 10px #ff6ac1',
+              'neon-cyan': '0 0 5px #00FFFF, 0 0 10px #00FFFF',
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #050505;
+        overflow-x: hidden;
+      }
+      /* Scanline effect */
+      .scanlines {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 0) 50%,
+          rgba(0, 0, 0, 0.2) 50%,
+          rgba(0, 0, 0, 0.2)
+        );
+        background-size: 100% 4px;
+        z-index: 50;
+        pointer-events: none;
+        opacity: 0.3;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0a0a12;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #ff6ac1;
+        border-radius: 4px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <div class="scanlines"></div>
+  </body>
+</html>
