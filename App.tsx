@@ -836,9 +836,18 @@ const App: React.FC = () => {
         </div>
       )}
 
-      <footer className="mt-12 flex flex-col items-center justify-center gap-2 font-code text-neon-pink/40 text-sm pb-8">
-        <div>&copy; MEDIA PRO NAMER BY NICO</div>
-      </footer>
+     <footer className="mt-12 flex flex-col items-center justify-center gap-2 font-code text-neon-pink/40 text-sm pb-8">
+  <div>&copy; MEDIA PRO NAMER BY NICO</div>
+ <div className="text-xs text-neon-pink/50">
+    SUPPORT
+  </div>
+  <a
+    href="mailto:hello@mediapronamer.com"
+    className="text-neon-cyan hover:text-neon-pink transition-all"
+  >
+    hello@mediapronamer.com
+  </a>
+</footer>
     </div>
   );
 };
