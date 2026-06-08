@@ -40,8 +40,8 @@ export async function createUser(email: string, password: string) {
   try {
     const { rows } = await pool.query(
       `insert into users(id,email,password_hash,role,credits,used_credits)
-       values($1,$2,$3,'user',0,0)
-       returning id, email, role, credits, used_credits`,
+ values($1,$2,$3,'user',10,0)
+ returning id, email, role, credits, used_credits`,
       [id, email, hash]
     );
 
